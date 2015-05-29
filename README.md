@@ -11,9 +11,13 @@ Use these Students to create conversation pairs and display the conversation bet
 The project is to be done in the assigned pairs, and will be turned in as a group demo and individual repository submission. You will zip your project's .git folder and submit the zipped file.
 
 Example output:
+
 Student 1: Hello
+
 Student 2: Hi
+
 Student 1: Well, this is weird
+
 ...
 
 Note that I am working with GitHub to get the CS 3230 organization set up, and we will be using those private repositories as our for submission and collaboration center as soon as they are available.
