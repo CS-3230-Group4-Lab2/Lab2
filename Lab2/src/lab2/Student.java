@@ -14,11 +14,11 @@ import java.util.List;
  */
 public class Student 
 {
-    private String firstName;
-    private String lastName;
-    private int score;
-    private Student partner;
-    private List<String> responses;
+    protected String firstName;
+    protected String lastName;
+    protected int score;
+    protected Student partner;
+    protected List<String> responses;
     
     
     public Student()
