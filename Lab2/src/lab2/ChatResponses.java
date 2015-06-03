@@ -5,7 +5,11 @@
  */
 package lab2;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 /**
  *
@@ -13,10 +17,10 @@ import java.util.Random;
  */
 public class ChatResponses 
 {
-    private String[] greetings;
-    private String[] general;
-    private String[] goodbyes;
-    private Random r = new Random();
+    protected String[] greetings;
+    protected String[] general;
+    protected String[] goodbyes;
+    protected Random r = new Random();
     
     public ChatResponses()
     {
@@ -28,19 +32,28 @@ public class ChatResponses
             "First in is First out","Do you like the beach?","Did you see that last cat video!!!!"};
     }
     
-    public String getGreeting()
+    private String getGreeting()
     {
         return this.greetings[r.nextInt(this.greetings.length)];
     }
     
-    public String getGeneral()
+    private String getGeneral()
     {
         return this.general[r.nextInt(this.general.length)];
     }
     
-    public String getGoodbye()
+    private String getGoodbye()
     {
         return this.goodbyes[r.nextInt(this.goodbyes.length)];
+    }
+    
+    public List<String> getResponses()
+    {
+        Set<String> responses = new HashSet<String>();
+        /**
+         * while unique list is less than 4 keep going on general so we get 3 unique general responses.
+         */
+        //return hashed list for uniqueness
     }
     
 }

@@ -14,11 +14,10 @@ import java.util.List;
  */
 public class Student 
 {
-    private String firstName;
-    private String lastName;
-    private int score;
-    private Student partner;
-    private List<String> responses;
+    protected String firstName;
+    protected String lastName;
+    protected int score;
+    protected List<String> responses;
     
     
     public Student()
@@ -26,7 +25,6 @@ public class Student
         this.firstName = " ";
         this.lastName = " ";
         this.score = 0;
-        this.partner = new Student();
         this.responses = new ArrayList<String>();
     }
     
@@ -35,15 +33,9 @@ public class Student
         this.firstName = first;
         this.lastName = last;
         this.score = s;
-        this.partner = new Student();
         this.responses = new ArrayList<String>();
         populateResponses(chat);
         
-    }
-    
-    public void assignPartner(Student stud)
-    {
-        this.partner = stud;
     }
     
     private void populateResponses(ChatResponses chats)

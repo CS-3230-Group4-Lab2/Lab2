@@ -36,4 +36,10 @@ public class StudentList
         }
     }
     
+    /**
+     * function to build the groups
+     * 
+     * 
+    */
+    
 }
