@@ -21,3 +21,5 @@ Student 1: Well, this is weird
 ...
 
 Note that I am working with GitHub to get the CS 3230 organization set up, and we will be using those private repositories as our for submission and collaboration center as soon as they are available.
+
+hello
