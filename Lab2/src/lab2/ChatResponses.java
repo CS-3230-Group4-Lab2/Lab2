@@ -50,10 +50,18 @@ public class ChatResponses
     public List<String> getResponses()
     {
         Set<String> responses = new HashSet<String>();
-        /**
-         * while unique list is less than 4 keep going on general so we get 3 unique general responses.
-         */
-        //return hashed list for uniqueness
+
+        responses.add(getGreeting());
+        while (responses.size() < 4)
+        {
+            responses.add(getGeneral());
+        }
+        responses.add(getGoodbye());
+
+        ArrayList<String> response;
+        response = responses.toArray();
+
+        return response;
     }
     
 }

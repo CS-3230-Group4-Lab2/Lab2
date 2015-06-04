@@ -40,12 +40,7 @@ public class Student
     
     private void populateResponses(ChatResponses chats)
     {
-        this.responses.add(chats.getGreeting());
-        for(int i =0; i<3; i++)
-        {
-            this.responses.add(chats.getGeneral());
-        }
-        this.responses.add(chats.getGoodbye());
+        responses = chats.getResponses();
     }
 
     public String getStudentName()
