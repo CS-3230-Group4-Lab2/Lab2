@@ -9,6 +9,7 @@ package lab2;
  *
  * @author Clinton
  */
+//Why does this class exist?
 public class Console
 {
 
