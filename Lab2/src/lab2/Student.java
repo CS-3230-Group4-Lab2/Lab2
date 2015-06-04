@@ -47,5 +47,10 @@ public class Student
         }
         this.responses.add(chats.getGoodbye());
     }
+
+    public String getStudentName()
+    {
+        return (this.firstName + " " + this.lastName)
+    }
     
 }
