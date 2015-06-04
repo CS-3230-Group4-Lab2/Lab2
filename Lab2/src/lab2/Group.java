@@ -9,7 +9,7 @@ package lab2;
  *
  * @author Clinton
  */
-public class Groups 
+public class Group
 {
     /**
      * function for checking unique student. don't allow two of same student
