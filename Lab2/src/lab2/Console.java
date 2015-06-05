@@ -11,5 +11,12 @@ package lab2;
  */
 public class Console
 {
+    private Console console;
+
+
+    public Console()
+    {
+
+    }
 
 }
