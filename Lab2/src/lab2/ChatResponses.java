@@ -22,6 +22,12 @@ public class ChatResponses
     protected String[] goodbyes;
     protected Random r = new Random();
     
+    //This is the pool of responses that our students will use
+    //The "greetings" is our students' FIRST phrase they'll say
+    //The "general" is our students second through fourth phrases they'll say
+    //The "goodbyes" is our students' last/fifth phrase they'll say
+    //The idea behind making a pool of responses is to allow the computer to generate our students'
+    //phrases rather than hard-coding it
     public ChatResponses()
     {
         this.greetings = new String[]{"Hello","Hi","Hola","Konichiwa","Hey all","Hello World!","For the HORDE!", "Howdy All","Howdy"};
@@ -32,21 +38,37 @@ public class ChatResponses
             "First in is First out","Do you like the beach?","Did you see that last cat video!!!!"};
     }
     
+    //This method generates a random number and then selects a random greeting based on the random number
     private String getGreeting()
     {
         return this.greetings[r.nextInt(this.greetings.length)];
     }
     
+    //This method generates a random number and then selects a random general phrase based on the random number
     private String getGeneral()
     {
         return this.general[r.nextInt(this.general.length)];
     }
     
+    //This method generates a random number and then selects a random goodbye phrase based on the random number
     private String getGoodbye()
     {
         return this.goodbyes[r.nextInt(this.goodbyes.length)];
     }
     
+    /*
+	This is the one public method of this class.  
+	The professor Trevor Marsh asked us to have consistent
+	output each time the user runs the program. 
+	Clinton decided to use a Hash to get the same responses each time
+	This method:
+	FIRST adds a greeting to an array of responses
+	NEXT adds THREE general conversation pieces
+	NEXT adds a goodbye at the end of the array of responses
+	After creating this array with 5 responses we create an ArrayList called Response
+	We make that arraylist contain all of our responses that our method just created for us
+	After creating this "response" arraylist we return it.
+    */
     public List<String> getResponses()
     {
         Set<String> responses = new HashSet<String>();

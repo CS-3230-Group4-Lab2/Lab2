@@ -19,7 +19,7 @@ public class Student
     protected int score;
     protected List<String> responses;
     
-    
+    //This constructor creates a student with no name, a score of 0, and randomly generated responses
     public Student()
     {
         this.firstName = " ";
@@ -28,6 +28,7 @@ public class Student
         this.responses = new ArrayList<String>();
     }
     
+    //This constructor allows us to create a student with a name, a score, and generated chat responses
     public Student(String first, String last, int s, ChatResponses chat)
     {
         this.firstName = first;
@@ -38,11 +39,13 @@ public class Student
         
     }
     
+    //This appears to create responses for our student
     private void populateResponses(ChatResponses chats)
     {
         responses = chats.getResponses();
     }
 
+    //This combines the student's first and last names together and returns them
     public String getStudentName()
     {
         return (this.firstName + " " + this.lastName)

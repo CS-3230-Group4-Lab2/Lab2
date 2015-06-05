@@ -15,9 +15,11 @@ import java.util.Set;
 /**
  *
  * @author Clinton
+ * Kenneth
  */
 public class StudentList 
 {
+    //The student's chat responses
     protected ChatResponses chats = new ChatResponses();
     protected List<Student> students;
     protected String[] roster;
@@ -25,6 +27,7 @@ public class StudentList
     
     public StudentList()
     {
+	//The students' names in alphabetical order
         this.roster = new String[]{"Kenneth Adair","Anthony Alder","Moselle Bair","Mathew Brewer","Michael Brown","Aaron Calder","Brett Carter","Tyler Cazier",
             "Jared Elzinga","Clinton Fowler","Andrew Gray","Christopher Strickland","Justin Walker"};
 
@@ -40,6 +43,18 @@ public class StudentList
             students.add(newstudent);
         }
 
+	/*
+	This FOR loop appears to manually create the groups that match the class roster
+	It's a bunch of IF statements
+	It appears that after we have generated each of the students in the class
+	we create the 6 groups and then add the students to the groups they correspond to
+	*****It may be worth noting that some students have dropped the class since we created this list
+	*****There are only 11 students right now with group 6(5 in our project).
+		Brett Carter in group 6 appears to have dissapeared
+		Anthony Alder in Group 3 appears to have dissapeared
+	As far as I can tell this loop creates an array of lists and then matches the students with the
+	group they belong with.
+	*/
         for(Student stud: this.students)
         {
             if (stud.getName() == "Aaron Calder" || stud.getName() == "Jared Elzinga")
