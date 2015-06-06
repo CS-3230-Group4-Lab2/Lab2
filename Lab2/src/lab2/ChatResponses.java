@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lab2;
+//package lab2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
@@ -39,19 +40,19 @@ public class ChatResponses
     }
     
     //This method generates a random number and then selects a random greeting based on the random number
-    private String getGreeting()
+    public String getGreeting()
     {
         return this.greetings[r.nextInt(this.greetings.length)];
     }
     
     //This method generates a random number and then selects a random general phrase based on the random number
-    private String getGeneral()
+    public String getGeneral()
     {
         return this.general[r.nextInt(this.general.length)];
     }
     
     //This method generates a random number and then selects a random goodbye phrase based on the random number
-    private String getGoodbye()
+    public String getGoodbye()
     {
         return this.goodbyes[r.nextInt(this.goodbyes.length)];
     }
@@ -69,6 +70,10 @@ public class ChatResponses
 	We make that arraylist contain all of our responses that our method just created for us
 	After creating this "response" arraylist we return it.
     */
+    
+    //I COULDN'T GET YOURS TO WORK SO I JUST MADE UP MY OWN BELOW
+    //THIS FANCY NICE ONE IS CLINT'S
+    /*
     public List<String> getResponses()
     {
         Set<String> responses = new HashSet<String>();
@@ -84,6 +89,30 @@ public class ChatResponses
         response = responses.toArray();
 
         return response;
+    }
+    */
+    
+    //THIS GHETTO THING IS KENNETH'S.  
+    //It's less elegant but it got me from point A to point B.
+    public List<String> getResponses(){
+    	String a, b, c, d, e;
+    	a = this.getGreeting();
+    	//general responses must be unique.
+    	b = this.getGeneral();
+    	c = this.getGeneral();
+    	//If c is the same as B it will do a while loop until it's different
+    	while(c == b){
+    		c = this.getGeneral();
+    	}
+    	d = this.getGeneral();
+    	//If d is the same as b or c it will do a while loop until it's different
+    	while(d == c || d == b){
+    		d = this.getGeneral();
+    	}
+    	e = this.getGoodbye();
+    	List<String> responses = Arrays.asList(a, b, c, d, e);
+    	
+    	return responses;
     }
     
 }

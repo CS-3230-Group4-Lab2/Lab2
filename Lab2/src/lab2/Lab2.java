@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lab2;
+//package lab2;
 
 /**
  *
@@ -18,6 +18,8 @@ public class Lab2
     public static void main(String[] args) 
     {
         // TODO code application logic here
+    	System.out.println("This is a test");
+    	StudentList test = new StudentList();
     }
     
 }

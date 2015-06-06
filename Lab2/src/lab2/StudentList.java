@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package lab2;
+//package lab2;
 
 import java.util.*;
 import java.util.ArrayList;
@@ -12,11 +7,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-/**
- *
- * @author Clinton
- * Kenneth
- */
 public class StudentList 
 {
     //The student's chat responses
@@ -35,7 +25,7 @@ public class StudentList
         
         Set<String> studentRoster = new HashSet<String>(Arrays.asList(this.roster));
         
-        
+        //Getting an error at "students.add(newstudent);
         for (String name: studentRoster)
         {
             String[] splitname = name.split(" ");
@@ -82,7 +72,7 @@ public class StudentList
                 this.groups.get(4).addStudentToGroup(stud);
                 continue;
             }
-            if (stud.getName() == "Andrew Gray" || stud.getName() == "Brett Carter" || stud.getName() == "Moselle Bair"
+            if (stud.getName() == "Andrew Gray" || stud.getName() == "Brett Carter" || stud.getName() == "Moselle Bair")
             {
                 this.groups.get(5).addStudentToGroup(stud);
                 continue;
