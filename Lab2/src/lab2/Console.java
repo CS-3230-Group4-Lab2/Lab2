@@ -1,4 +1,4 @@
-//package lab2;
+package lab2;
 //Why does this class exist?
 public class Console
 {

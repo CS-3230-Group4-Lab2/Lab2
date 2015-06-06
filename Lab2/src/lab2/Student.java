@@ -1,5 +1,5 @@
 //commented this out for my computer
-//package lab2;
+package lab2;
 
 import java.util.ArrayList;
 import java.util.List;
