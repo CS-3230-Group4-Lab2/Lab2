@@ -5,6 +5,9 @@
  */
 package lab2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Clinton
@@ -20,6 +23,19 @@ public class Lab2
         // TODO code application logic here
     	System.out.println("This is a test");
     	StudentList test = new StudentList();
+        List<Group> studentGroups = new ArrayList<Group>();
+        studentGroups = test.getGroups();
+        System.out.println(studentGroups.size());
+        
+        int groupNumber = 1;
+        for (Group grp : studentGroups)
+        {
+            System.out.println("Group #" + groupNumber);
+            System.out.println(grp.getChat());
+            System.out.println();
+            groupNumber++;
+        }
+       
     }
     
 }

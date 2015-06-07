@@ -22,17 +22,22 @@ public class StudentList
             "Jared Elzinga","Clinton Fowler","Andrew Gray","Christopher Strickland","Justin Walker"};
 
         this.groups = new ArrayList<Group>();
+        this.students = new ArrayList<Student>();
         
         Set<String> studentRoster = new HashSet<String>(Arrays.asList(this.roster));
         
-        //Getting an error at "students.add(newstudent);
         for (String name: studentRoster)
         {
             String[] splitname = name.split(" ");
             Student newstudent = new Student(splitname[0], splitname[1], 0, chats);
             students.add(newstudent);
         }
-
+        
+        for(int i = 0; i < 6; i++)
+        {
+            this.groups.add(new Group());
+        }
+        
 	/*
 	This FOR loop appears to manually create the groups that match the class roster
 	It's a bunch of IF statements
@@ -46,33 +51,33 @@ public class StudentList
 	group they belong with.
 	*/
         for(Student stud: this.students)
-        {
-            if (stud.getName() == "Aaron Calder" || stud.getName() == "Jared Elzinga")
+        {            
+            if (stud.getName().equals("Aaron Calder") || stud.getName().equals("Jared Elzinga"))
             {
                 this.groups.get(0).addStudentToGroup(stud);
                 continue;
             }
-            if (stud.getName() == "Justin Walker" || stud.getName() == "Michael Brown")
+            if (stud.getName().equals("Justin Walker") || stud.getName().equals("Michael Brown"))
             {
                 this.groups.get(1).addStudentToGroup(stud);
                 continue;
             }
-            if (stud.getName() == "Anthony Alder" || stud.getName() == "Christopher Strickland")
+            if (stud.getName().equals("Anthony Alder") || stud.getName().equals("Christopher Strickland"))
             {
                 this.groups.get(2).addStudentToGroup(stud);
                 continue;
             }
-            if (stud.getName() == "Clinton Fowler" || stud.getName() == "Kenneth Adair")
+            if (stud.getName().equals("Clinton Fowler") || stud.getName().equals("Kenneth Adair"))
             {
                 this.groups.get(3).addStudentToGroup(stud);
                 continue;
             }
-            if (stud.getName() == "Mathew Brewer" || stud.getName() == "Tyler Cazier")
+            if (stud.getName().equals("Mathew Brewer") || stud.getName().equals("Tyler Cazier"))
             {
                 this.groups.get(4).addStudentToGroup(stud);
                 continue;
             }
-            if (stud.getName() == "Andrew Gray" || stud.getName() == "Brett Carter" || stud.getName() == "Moselle Bair")
+            if (stud.getName().equals("Andrew Gray") || stud.getName().equals("Brett Carter") || stud.getName().equals("Moselle Bair"))
             {
                 this.groups.get(5).addStudentToGroup(stud);
                 continue;

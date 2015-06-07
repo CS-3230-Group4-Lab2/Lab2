@@ -37,7 +37,20 @@ public class Group
         }
         this.students.add(student);
     }
-
+    
+    //Get a string that contains each students name on a new line
+    public String getGroupMembers()
+    {
+        String groupMembers = "";
+        for (Student stud : this.students)
+        {
+            groupMembers += stud.getName();
+            groupMembers += "\n";
+        }
+        return groupMembers;
+    }
+    
+    //Get a string that has all responses from each student on a new line
     public String getChat()
     {
         String chatText = "";
@@ -49,7 +62,7 @@ public class Group
                 chatText += student.getName();
                 chatText += ": ";
                 chatText += student.responses.get(i);
-                chatText += "\n";
+                chatText += "\n\n";
             }
         }
 

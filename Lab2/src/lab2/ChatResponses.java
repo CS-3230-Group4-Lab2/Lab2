@@ -40,19 +40,19 @@ public class ChatResponses
     }
     
     //This method generates a random number and then selects a random greeting based on the random number
-    public String getGreeting()
+    private String getGreeting()
     {
         return this.greetings[r.nextInt(this.greetings.length)];
     }
     
     //This method generates a random number and then selects a random general phrase based on the random number
-    public String getGeneral()
+    private String getGeneral()
     {
         return this.general[r.nextInt(this.general.length)];
     }
     
     //This method generates a random number and then selects a random goodbye phrase based on the random number
-    public String getGoodbye()
+    private String getGoodbye()
     {
         return this.goodbyes[r.nextInt(this.goodbyes.length)];
     }
@@ -73,27 +73,30 @@ public class ChatResponses
     
     //I COULDN'T GET YOURS TO WORK SO I JUST MADE UP MY OWN BELOW
     //THIS FANCY NICE ONE IS CLINT'S
-    /*
+
     public List<String> getResponses()
     {
         Set<String> responses = new HashSet<String>();
+        List<String> response = new ArrayList<String>();
+        response.add(getGreeting());
 
-        responses.add(getGreeting());
-        while (responses.size() < 4)
+        while (responses.size() < 3)
         {
             responses.add(getGeneral());
         }
-        responses.add(getGoodbye());
-
-        ArrayList<String> response;
-        response = responses.toArray();
+        for(String s: responses)
+        {
+            response.add(s);
+        }
+        response.add(getGoodbye());
 
         return response;
     }
-    */
+
     
     //THIS GHETTO THING IS KENNETH'S.  
     //It's less elegant but it got me from point A to point B.
+    /*
     public List<String> getResponses(){
     	String a, b, c, d, e;
     	a = this.getGreeting();
@@ -114,5 +117,6 @@ public class ChatResponses
     	
     	return responses;
     }
+    */
     
 }
