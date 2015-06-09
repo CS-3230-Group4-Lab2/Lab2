@@ -27,6 +27,7 @@ public class Lab2
         studentGroups = test.getGroups();
         //System.out.println(studentGroups.size());
         ChatWindow window = new ChatWindow();
+        window.updateGroups(studentGroups);
         
         int groupNumber = 1;
         for (Group grp : studentGroups)
