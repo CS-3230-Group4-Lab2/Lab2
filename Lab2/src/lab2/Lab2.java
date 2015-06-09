@@ -21,11 +21,12 @@ public class Lab2
     public static void main(String[] args) 
     {
         // TODO code application logic here
-    	System.out.println("This is a test");
+    	//System.out.println("This is a test");
     	StudentList test = new StudentList();
         List<Group> studentGroups = new ArrayList<Group>();
         studentGroups = test.getGroups();
-        System.out.println(studentGroups.size());
+        //System.out.println(studentGroups.size());
+        ChatWindow window = new ChatWindow();
         
         int groupNumber = 1;
         for (Group grp : studentGroups)
@@ -33,8 +34,11 @@ public class Lab2
             System.out.println("Group #" + groupNumber);
             System.out.println(grp.getChat());
             System.out.println();
+            window.displayChat(grp, groupNumber);
             groupNumber++;
         }
+        
+        
        
     }
     

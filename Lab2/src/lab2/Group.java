@@ -30,7 +30,7 @@ public class Group
         }
         for(Student studA: this.students)
         {
-            if(studA.getName() == student.getName())
+            if(studA.getName().equals(student.getName()))
             {
                 return;
             }
